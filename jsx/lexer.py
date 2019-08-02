@@ -1,12 +1,12 @@
 import re
 
 from pygments.lexer import bygroups, include, default
-from pygments.lexers.javascript import JavascriptLexer
+from pygments.lexers.javascript import TypeScriptLexer
 from pygments.token import Name, Operator, Punctuation, String, Text
 
 
-# Use same tokens as `JavascriptLexer`, but with tags and attributes support
-TOKENS = JavascriptLexer.tokens
+# Use same tokens as `TypeScriptLexer`, but with tags and attributes support
+TOKENS = TypeScriptLexer.tokens
 TOKENS.update({
     'jsx': [
         (r'(<)(/?)(>)', bygroups(Punctuation, Punctuation, Punctuation)),  # JSXFragment <>|</>
@@ -44,7 +44,7 @@ TOKENS.update({
 TOKENS['root'].insert(0, include('jsx'))
 
 
-class JsxLexer(JavascriptLexer):
+class JsxLexer(TypeScriptLexer):
     name = 'react'
     aliases = ['jsx', 'react']
     filenames = ['*.jsx', '*.react']
