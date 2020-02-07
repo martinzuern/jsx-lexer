@@ -1,26 +1,14 @@
-jsx-lexer
+tsx-lexer
 =========
 
-.. image:: https://travis-ci.org/fcurella/jsx-lexer.svg?branch=master
-    :target: https://travis-ci.org/fcurella/jsx-lexer
-
-.. image:: https://coveralls.io/repos/github/fcurella/jsx-lexer/badge.svg?branch=master
-    :target: https://coveralls.io/github/fcurella/jsx-lexer?branch=master
-
-A JSX lexer for Pygments
-
-Installation
-------------
-.. code-block:: sh
-
-    $ pip install jsx-lexer
+A TSX lexer for Pygments
 
 Usage with Sphinx
 -----------------
 
-To use within Sphinx, simply specify ``jsx`` for your ``code-block``::
+To use within Sphinx, simply specify ``tsx`` for your ``code-block``::
 
-    .. code-block:: jsx
+    .. code-block:: tsx
 
         const BlogTitle = ({ children }) => (
           <h3>{children}</h3>
@@ -57,9 +45,9 @@ Then, add the following to your ``mkdocs.yml``:
     - codehilite
   extra_css: [pygments.css]
 
-Now, you can use ``jsx`` in your code blocks::
+Now, you can use ``tsx`` in your code blocks::
 
-    ```jsx
+    ```tsx
     const BlogTitle = ({ children }) => (
       <h3>{children}</h3>
     );
